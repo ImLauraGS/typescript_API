@@ -10,32 +10,6 @@
     <h1 class="text-red-500">Random Dad Jokes</h1>
     <p id="joke-text"></p>
     <button id="joke-button">Next Dad Joke</button>
-    <script>
- 
-        async function getDadJoke() {
-            const API_URL = 'https://icanhazdadjoke.com/';
-
-            const response = await fetch(API_URL, {
-                headers: {
-                    Accept: 'application/json',
-                },
-            });
-            const data = await response.json();
-            return data.joke;
-        }
-
-        document.getElementById('joke-button').addEventListener('click', async () => {
-  
-            const joke = await getDadJoke();
-        
-            document.getElementById('joke-text').innerText = joke;
-        });
-
-        window.onload = async () => {
-            const initialJoke = await getDadJoke();
-            document.getElementById('joke-text').innerText = initialJoke;
-        };
-    </script>
-
 </body>
+    <script src="dist/js/app.js"></script>
 </html>
