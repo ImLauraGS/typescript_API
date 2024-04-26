@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-red-500">Random Dad Jokes</h1>
+    <p id="joke-text">Click on the button downbelow</p>
+    <button id="joke-button">Get Random Dad Joke</button>
+    <script>
+ 
+        async function getDadJoke() {
+            const API_URL = 'https://icanhazdadjoke.com/';
+
+            const response = await fetch(API_URL, {
+                headers: {
+                    Accept: 'application/json',
+                },
+            });
+            const data = await response.json();
+            return data.joke;
+        }
+
+        document.getElementById('joke-button').addEventListener('click', async () => {
+  
+            const joke = await getDadJoke();
+        
+            document.getElementById('joke-text').innerText = joke;
+        });
+    </script>
+
+</body>
+</html>
