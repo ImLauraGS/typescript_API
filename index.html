@@ -6,31 +6,31 @@
     <link rel="stylesheet" href="src/css/styles.css">
     <title>Document</title>
 </head>
-<body>
-    <h1 class="text-red-500">Random Dad Jokes</h1>
-    <p id="joke-text">Click on the button downbelow</p>
-    <button id="joke-button">Get Random Dad Joke</button>
-    <script>
- 
-        async function getDadJoke() {
-            const API_URL = 'https://icanhazdadjoke.com/';
+<body class="bg-cover bg-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]">
 
-            const response = await fetch(API_URL, {
-                headers: {
-                    Accept: 'application/json',
-                },
-            });
-            const data = await response.json();
-            return data.joke;
-        }
+    <header>
 
-        document.getElementById('joke-button').addEventListener('click', async () => {
-  
-            const joke = await getDadJoke();
-        
-            document.getElementById('joke-text').innerText = joke;
-        });
-    </script>
+    </header>
+    <main class="flex justify-center items-center h-screen">
+        <section class="w-[40rem] h-auto bg-blue-200 rounded-xl p-6 shadow-lg shadow-[#23486F] text-center items-center flex flex-col justify-around gap-4">
+            <h1 class=" text-2xl text-gray-800 font-bold">Get ready to laugh!🤣</h1>
+            <p class="text-lg font-normal" id="joke-text"></p>
+            <div class="flex items-center gap-4 mb-5">
+                <button id="score1" class="w-8 h-8 bg-gray-300 rounded-full">1</button>
+                <button id="score2" class="w-8 h-8 bg-gray-300 rounded-full">2</button>
+                <button id="score3" class="w-8 h-8 bg-gray-300 rounded-full">3</button>
+            </div>
+              </div>
+            <button class="rounded-xl px-4 py-2 bg-white flex gap-2 justify-between hover:shadow-lg hover:rounded-3xl" id="joke-button">
+                Next Dad Joke
+                <img class="w-6" src="/assets/carbon_next-outline.svg" alt="next icon">
+            </button>
+        </section>
+    </main>
+    <footer>
 
+    </footer>
+  <script type="module" src="dist/js/app.js"></script>
 </body>
+    
 </html>
