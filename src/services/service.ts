@@ -1,5 +1,5 @@
 
-function dadJokesService() {
+export function dadJokesService() {
   return {
     getDadJoke: async () => {
 
@@ -16,3 +16,4 @@ function dadJokesService() {
     },
   };
 }
+
