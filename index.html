@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1 class="text-red-500">Random Dad Jokes</h1>
-    <p id="joke-text">Click on the button downbelow</p>
-    <button id="joke-button">Get Random Dad Joke</button>
+    <p id="joke-text"></p>
+    <button id="joke-button">Next Dad Joke</button>
     <script>
  
         async function getDadJoke() {
@@ -30,6 +30,11 @@
         
             document.getElementById('joke-text').innerText = joke;
         });
+
+        window.onload = async () => {
+            const initialJoke = await getDadJoke();
+            document.getElementById('joke-text').innerText = initialJoke;
+        };
     </script>
 
 </body>
