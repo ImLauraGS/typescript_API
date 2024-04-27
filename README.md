@@ -14,9 +14,7 @@ Los dos temas más importantes que pondrás en práctica en este proyecto son Ty
 
 Una empresa de coaching está llevando a cabo un experimento en empresas de Barcelona, en el cual está midiendo el impacto del humor y la diversión en la productividad.Nos han pedido una aplicación web que muestre chistes a los empleados antes de comenzar la jornada laboral. Serás el encargado de llevar a cabo la base del proyecto para hacer una demo en dos semanas con el cliente y comenzar las pruebas con usuarios reales.
 
-
 ![alt text](assets/image.png)
-![alt text](assets/image%20copy.png)
 
 ## 💻 Tecnologias usadas
 
@@ -90,7 +88,6 @@ The two most important topics you will put into practice in this project are Typ
 A coaching company is conducting an experiment in Barcelona-based companies, in which it is measuring the impact of humor and fun on productivity. They have asked for a web application that displays jokes to employees before starting the workday. You will be responsible for carrying out the foundation of the project to present a demo in two weeks with the client and start testing with real users.
 
 ![alt text](assets/image.png)
-![alt text](assets/image%20copy.png)
  
 
 ## 💻 Technologies Used
