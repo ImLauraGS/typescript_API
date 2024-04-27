@@ -7,23 +7,31 @@
     <title>Document</title>
 </head>
 <body class="bg-cover bg-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]">
-
-    <header>
-
+    <header class="fixed w-full shadow-2xl shadow-[#23486F]">
+        <div class="text-white w-full flex gap-3 items-center py-2 px-6">
+            <img class="w-12" src="/assets/weather-svgrepo-com.svg" alt="">
+            <p class="font-semibold text-xl" id="weather"></p>
+            <p id="weather_description"></p>
+        </div>
     </header>
     <main class="flex justify-center items-center h-screen">
-        <section class="w-[40rem] h-auto bg-blue-200 rounded-xl p-6 shadow-lg shadow-[#23486F] text-center items-center flex flex-col justify-around gap-4">
-            <h1 class=" text-2xl text-gray-800 font-bold">Get ready to laugh!🤣</h1>
+        <section class="m-4 lg:w-[50rem] h-auto bg-blue-100 rounded-xl p-6 shadow-lg shadow-[#23486F] text-center items-center flex flex-col justify-around gap-4">
+            <h1 class="text-2xl text-gray-800 font-bold">Get ready to laugh!🤣</h1>
             <p class="text-lg font-normal" id="joke-text"></p>
             <div class="flex items-center gap-4 mb-5">
-                <button id="score1" class="w-8 h-8 bg-gray-300 rounded-full">1</button>
-                <button id="score2" class="w-8 h-8 bg-gray-300 rounded-full">2</button>
-                <button id="score3" class="w-8 h-8 bg-gray-300 rounded-full">3</button>
+                <svg class="fill-[#FC6B50] w-8" id="score1" viewBox="0 0 496 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M248 8C111 8 0 119 0 256C0 393 111 504 248 504C385 504 496 393 496 256C496 119 385 8 248 8ZM248 456C137.7 456 48 366.3 48 256C48 145.7 137.7 56 248 56C358.3 56 448 145.7 448 256C448 366.3 358.3 456 248 456ZM168 240C185.7 240 200 225.7 200 208C200 190.3 185.7 176 168 176C150.3 176 136 190.3 136 208C136 225.7 150.3 240 168 240ZM328 176C310.3 176 296 190.3 296 208C296 225.7 310.3 240 328 240C345.7 240 360 225.7 360 208C360 190.3 345.7 176 328 176ZM336 320H160C146.8 320 136 330.8 136 344C136 357.2 146.8 368 160 368H336C349.2 368 360 357.2 360 344C360 330.8 349.2 320 336 320Z"/>
+                </svg>          
+                <svg class="fill-[#FCBD50] w-8" id="score2" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M248 8C111 8 0 119 0 256C0 393 111 504 248 504C385 504 496 393 496 256C496 119 385 8 248 8ZM389.4 397.4C351.6 435.2 301.4 456 248 456C194.6 456 144.4 435.2 106.6 397.4C68.8 359.6 48 309.4 48 256C48 202.6 68.8 152.4 106.6 114.6C144.4 76.8 194.6 56 248 56C301.4 56 351.6 76.8 389.4 114.6C427.2 152.4 448 202.6 448 256C448 309.4 427.2 359.6 389.4 397.4ZM328 224C345.7 224 360 209.7 360 192C360 174.3 345.7 160 328 160C310.3 160 296 174.3 296 192C296 209.7 310.3 224 328 224ZM168 224C185.7 224 200 209.7 200 192C200 174.3 185.7 160 168 160C150.3 160 136 174.3 136 192C136 209.7 150.3 224 168 224ZM362.4 288H133.6C125.4 288 119.1 295 120.1 303C127.6 362.2 179 408 241.2 408H254.8C317 408 368.4 362.2 375.9 303C376.9 295 370.6 288 362.4 288Z"/>
+                </svg>
+                <svg class="fill-[#A1D171] w-8" id="score3" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M464 256C464 200.835 442.086 147.929 403.078 108.922C364.071 69.9142 311.165 48 256 48C200.835 48 147.929 69.9142 108.922 108.922C69.9142 147.929 48 200.835 48 256C48 311.165 69.9142 364.071 108.922 403.078C147.929 442.086 200.835 464 256 464C311.165 464 364.071 442.086 403.078 403.078C442.086 364.071 464 311.165 464 256ZM0 256C0 188.105 26.9714 122.99 74.9807 74.9807C122.99 26.9714 188.105 0 256 0C323.895 0 389.01 26.9714 437.019 74.9807C485.029 122.99 512 188.105 512 256C512 323.895 485.029 389.01 437.019 437.019C389.01 485.029 323.895 512 256 512C188.105 512 122.99 485.029 74.9807 437.019C26.9714 389.01 0 323.895 0 256ZM130.7 313.9C126.5 300.3 137.8 288 152 288H364.5C378.7 288 390 300.4 385.8 313.9C369 368.4 318.2 408 258.2 408C198.2 408 147.4 368.4 130.7 313.9ZM133.5 130.6L223.4 178.5C234.1 184.2 234.1 199.6 223.4 205.3L133.5 253.2C125.6 257.4 116 251.7 116 242.7C116 239.9 117 237.2 118.8 235.1L154.8 191.9L118.8 148.7C117 146.6 116 143.9 116 141.1C116 132.1 125.6 126.4 133.5 130.6ZM396 141.1C396 143.9 395 146.6 393.2 148.7L357.2 191.9L393.2 235.1C395 237.2 396 239.9 396 242.7C396 251.7 386.4 257.4 378.5 253.2L288.6 205.3C277.9 199.6 277.9 184.2 288.6 178.5L378.5 130.6C386.4 126.4 396 132.1 396 141.1Z"/>
+                </svg>
             </div>
-              </div>
-            <button class="rounded-xl px-4 py-2 bg-white flex gap-2 justify-between hover:shadow-lg hover:rounded-3xl" id="joke-button">
+            <button class="rounded-xl px-4 py-2 bg-white font-semibold flex gap-2 justify-between hover:shadow-lg hover:rounded-3xl" id="joke-button">
                 Next Dad Joke
-                <img class="w-6" src="/assets/carbon_next-outline.svg" alt="next icon">
+                <img class="w-7" src="/assets/carbon_next-outline.svg" alt="next icon">
             </button>
         </section>
     </main>

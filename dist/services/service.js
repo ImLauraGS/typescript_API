@@ -21,3 +21,31 @@ export function dadJokesService() {
         }),
     };
 }
+export function chuckJokesService() {
+    return {
+        getChuckJoke: () => __awaiter(this, void 0, void 0, function* () {
+            const API_URL = 'https://api.chucknorris.io/jokes/random';
+            const response = yield fetch(API_URL, {
+                headers: {
+                    Accept: 'application/json',
+                },
+            });
+            const data = yield response.json();
+            return data.value;
+        }),
+    };
+}
+export function weatherService() {
+    return {
+        getWeather: (provCode, cp) => __awaiter(this, void 0, void 0, function* () {
+            const API_URL = `https://www.el-tiempo.net/api/json/v2/provincias/${provCode}/municipios/${cp}`;
+            const response = yield fetch(API_URL, {
+                headers: {
+                    Accept: 'application/json',
+                },
+            });
+            const data = yield response.json();
+            return data;
+        })
+    };
+}
